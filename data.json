@@ -1,0 +1,72 @@
+[
+    {
+      "id": "0",
+      "age": "19",
+      "gender": "Male",
+      "income": "11-20%",
+      "location": "São Paulo"
+    },
+    {
+      "id": "1",
+      "age": 26,
+      "gender": "Male",
+      "income": "Lower 50%",
+      "location": "São Paulo"
+    },
+    {
+      "id": "2",
+      "age": 40,
+      "gender": "Male",
+      "income": "Lower 50%",
+      "location": "Rio de Janeiro"
+    },
+    {
+      "id": "3",
+      "age": 47,
+      "gender": "Male",
+      "income": "Lower 50%",
+      "location": "Porto Alegre"
+    },
+    {
+      "id": "4",
+      "age": 22,
+      "gender": "Female",
+      "income": "31-40%",
+      "location": "São Paulo"
+    },
+    {
+      "id": "5",
+      "age": 25,
+      "gender": "Female",
+      "income": "41-50%",
+      "location": "Rio de Janeiro"
+    },
+    {
+      "id": "6",
+      "age": 37,
+      "gender": "Female",
+      "income": "Lower 50%",
+      "location": "Porto Alegre"
+    },
+    {
+      "id": "7",
+      "age": 77,
+      "gender": "Female",
+      "income": "Top 10%",
+      "location": "Porto Alegre"
+    },
+    {
+      "id": "8",
+      "age": 56,
+      "gender": "Unknown",
+      "income": "Top 10%",
+      "location": "São Paulo"
+    },
+    {
+      "id": "9",
+      "age": "Unknown",
+      "gender": "Unknown",
+      "income": "Unknown",
+      "location": "Rio de Janeiro"
+    }
+]
