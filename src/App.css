@@ -1,0 +1,13 @@
+.body {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    width: 90vw;
+}
+
+.secondary {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-bottom: 50px;
+}
