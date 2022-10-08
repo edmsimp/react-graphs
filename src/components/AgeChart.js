@@ -2,21 +2,22 @@ import React, { useState, useEffect } from 'react';
 import { Chart as ChartJS, CategoryScale, LinearScale, BarElement, Title, Tooltip, Legend } from 'chart.js';
 import { Bar } from 'react-chartjs-2';
 
-import './AgeChart.css';
-
-import parsedData from '../utils/parse_data';
+import { data, ageCount, totalPopulation } from '../utils/counters';
 import { ageLabels } from '../utils/constants';
 
+import './AgeChart.css';
+
 ChartJS.register(CategoryScale, LinearScale, BarElement, Title, Tooltip, Legend);
+ChartJS.defaults.font.family = '"Open Sans", sans-serif';
 
 function AgeChart () {
-
+    // Chart states
     const [graphData, setGraphData] = useState({ datasets: [] });
     const [graphOptions, setGraphOptions] = useState({});
 
     useEffect(() => {
-        const ageCount = parsedData.ageCount(parsedData.data);
-        const maxAgeCount = Math.max(...ageCount);
+        const ageData = ageCount(data);
+        const maxAgeCount = Math.max(...ageData);
 
         setGraphData({
             labels: ageLabels,
@@ -24,14 +25,13 @@ function AgeChart () {
               {
                 type: 'bar',
                 label: 'People',
-                data: ageCount,
-                backgroundColor: ['rgba(66, 68, 179, 0.99)'],
+                data: ageData,
+                backgroundColor: ['rgb(66, 68, 179)']
               }
             ],
           });
-    
+
           setGraphOptions({
-            maintainAspectRatio: false,
             responsive: true,
             plugins: {
               legend: {
@@ -55,7 +55,7 @@ function AgeChart () {
                   },
                   beginAtZero: true,
                   callback: (tick) => {
-                    if (Number.isInteger(tick)) { return Math.round(tick / parsedData.totalPopulation * 100) + '%'; }
+                    if (Number.isInteger(tick)) { return Math.round(tick / totalPopulation * 100) + '%'; }
                   },
                 },
                 min: 0,
@@ -79,9 +79,9 @@ function AgeChart () {
         }, []);
 
     return (
-        <div className='age'>
-            <Bar data={graphData} options={graphOptions} height={200}/>
-        </div>
+      <div id='ageChart'>
+        <Bar data={graphData} options={graphOptions} height={200}/>
+      </div>
     );
 }
 

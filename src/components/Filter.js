@@ -1,5 +1,7 @@
 import React from 'react';
 
+import './Filter.css';
+
 function Filter ({ value, onValueChange, title, options}) {
     const handleChange = event => {
         onValueChange({ value: event.target.value });

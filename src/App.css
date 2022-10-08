@@ -1,11 +1,15 @@
-.body {
+#app {
+    font-family: 'Open Sans', sans-serif;
+}
+
+#body {
     display: flex;
     flex-direction: column;
     margin: auto;
     width: 90vw;
 }
 
-.secondary {
+#charts {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
